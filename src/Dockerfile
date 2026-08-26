@@ -17,6 +17,7 @@ RUN \
     && "${PSR_VENV_BIN}/pip" install --upgrade --no-cache-dir pip setuptools wheel \
     # Install semantic-release (/root/.local/bin)
     && "${PSR_VENV_BIN}/pip" install --pre --no-cache-dir -r requirements.txt \
+    && "${PSR_VENV_BIN}/pip" install gitpython==3.1.59 \
     # Validate binary availability
     && bash -c "${PSR_VENV_BIN}/semantic-release --help" \
     # make action script executable
